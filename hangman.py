@@ -1,6 +1,7 @@
-
+import os
 
 def hangman(word):
+	os.system('clear');
 	wrong = 0
 	stages = ["",
 				"__________________",
@@ -16,7 +17,7 @@ def hangman(word):
 	win = False
 	print("Welcome to Hangman!");
 	while wrong < len(stages):
-		msg = "Guess A Letter"
+		msg = "Guess A Letter: "
 		char = input(msg)
 		if char in rletters:
 			cind = rletters.index(char)
