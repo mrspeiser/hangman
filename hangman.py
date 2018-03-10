@@ -1,7 +1,17 @@
 import os
+from sys import platform
 
 def hangman(word):
-	os.system('clear');
+	if platform == "linux" or platform == "linux2":
+	    # linux
+	    os.system('clear');
+	elif platform == "darwin":
+	    # OS X
+	    os.system('clear');
+	elif platform == "win32":
+	    # Windows...
+	    os.system('cls');
+	    
 	wrong = 0
 	stages = ["",
 				"__________________",
